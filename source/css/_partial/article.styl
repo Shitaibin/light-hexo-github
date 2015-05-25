@@ -1,9 +1,14 @@
+// 文章页面
+
+
 icon-size = 32px
 icon-gap = 25px
 
 article
-  box-shadow 1px 2px 3px #ddd
+  //box-shadow 0px 1px 1px #ddd //周围的阴影:右，下，左
   background #fff
+  font-size 15px // 整个页面全局设置
+
   &.page
     padding-left 20px
     .icon
@@ -32,6 +37,7 @@ article
           font 12px font-icon
           padding-left 10px
           vertical-align super
+
 
   .post-content
     padding 20px 20px 15px (icon-size + icon-gap + 20)
@@ -128,17 +134,17 @@ article
     p, blockquote, ul, ol, dl, table, iframe, h3, h4, h5, h6, .video-container
       margin-top 15px
 
-    blockquote
+    blockquote // 引用
       border-top 1px solid color-border
       border-bottom 1px solid color-border
-      font-style italic
+      //font-style italic
       font-family font-serif
-      font-size 1.2em
+      //font-size 1.5em
       padding 0 30px 15px
-      text-align center
+      //text-align center
       footer
         border-top none
-        font-size 0.8em
+        font-size 1.2em
         line-height 1
         margin 20px 0 0
         padding-top 0
@@ -151,14 +157,14 @@ article
     code, pre
       font-family font-mono
 
-    code
-      background #eee
+    code // 行内代码
+      background #eee //eee
       color #666
       padding 0 5px
       margin 0 2px
-      font-size 0.9em
+      font-size 0.8em
       border 1px solid color-border
-      border-radius 3px
+      border-radius 1px
 
     pre
       background #eee
@@ -201,7 +207,7 @@ article
       margin-top 5px
       color color-meta
       position relative
-      font-size 0.9em
+      font-size 1.0em  // 调整后没有影响
       padding-left 25px
       &:before
         content '\f040'
@@ -232,14 +238,14 @@ article
       margin 1em 0 0.5em 1.5em
       text-align left
       width 45%
-      font-size 1.5em
+      font-size 1.2em
 
-  footer
+  footer // 文章底部标签
     margin-top 15px
     padding-top 10px
     border-top 1px solid color-border
     color color-meta
-    font-size 0.9em
+    font-size 1em  // 调大后，底部图标不协调
     line-height 16px
     position relative
     min-height 16px
@@ -285,3 +291,50 @@ article
       margin-top 15px
       iframe
         margin-top 0
+
+/*toc*/
+.toc-article
+  background #eee
+  margin 2em 0 0 0.2em
+  padding 1em
+  border-radius 5px
+  .toc-title
+    font-size 100%
+  strong
+    padding 0.3em 1
+ol.toc
+  width 100%
+  margin 1em 2em 0 0
+#toc
+  line-height 1em
+  font-size 0.9em
+  float right
+  .toc
+    padding 0 
+    li
+      list-style-type none
+  .toc-child 
+    padding-left 0em
+#toc.toc-aside
+  display none
+  width 13%
+  position fixed
+  right 2%
+  top 320px
+  overflow hidden
+  line-height 1.5em
+  font-size 1em
+  color color-heading
+  opacity .6
+  transition opacity 1s ease-out
+  strong
+    padding 0.3em 0
+    color color-font
+  &:hover
+    transition opacity .3s ease-out
+    opacity 1
+  a
+    transition color 1s ease-out
+    &:hover
+      color color-theme
+      transition color .3s ease-out

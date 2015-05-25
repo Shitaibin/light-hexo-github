@@ -1,6 +1,6 @@
 menu:
-  Home: /
-  Archives: /archives
+  文章列表: /archives
+  我~: /about
 
 widgets:
 - search
@@ -8,6 +8,7 @@ widgets:
 - tag
 
 excerpt_link: Read More
+archive_yearly: true
 
 twitter:
   username:
@@ -34,3 +35,4 @@ facebook:
   comment_count: 5
   comment_width: 840
   comment_colorscheme: light
+

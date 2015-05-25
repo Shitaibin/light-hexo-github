@@ -1,3 +1,7 @@
+# First of All
+
+I changed some feature for [my blog](shitaibin.github.io)
+
 # Light
 
 Default theme for [Hexo].
